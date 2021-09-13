@@ -1,0 +1,4 @@
+<div class="container">
+  <app-todo-form (createTodoItem)="onCreate($event)"></app-todo-form>
+  <app-todo-list [todoItems]="todoList$ | async"></app-todo-list>
+</div>

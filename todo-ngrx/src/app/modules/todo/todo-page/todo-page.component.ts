@@ -10,6 +10,7 @@ export class TodoPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

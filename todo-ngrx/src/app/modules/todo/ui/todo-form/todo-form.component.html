@@ -1,0 +1,13 @@
+<form class="form-container container" (submit)="onCreate($event)">
+  <div class="container d-flex">
+    <input
+      class="input form-control"
+      id="title"
+      type="text"
+      [formControl]="titleControl"
+      [placeholder]="titlePlaceholder"
+    >
+    <app-button (click)="onCreate($event)"  [config]="okBtnConfig"></app-button>
+  </div>
+  <p *ngIf="titleControl.invalid && titleControl.touched" class="error-message">Invalid text*</p>
+</form>

@@ -8,6 +8,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { TodoModule } from "./modules/todo/todo.module";
+import { SharedModule } from "./shared/shared.module";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { TodoModule } from "./modules/todo/todo.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TodoModule,
+    SharedModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
-    TodoModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

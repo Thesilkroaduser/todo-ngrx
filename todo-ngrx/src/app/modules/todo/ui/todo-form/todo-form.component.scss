@@ -1,0 +1,22 @@
+.form-container {
+  border-radius: 5px;
+  padding: 10px 0px 40px 0px;
+}
+
+.label {
+  padding-left: 15px;
+}
+
+.input {
+  margin-right: 4px;
+}
+
+.error-message {
+  padding-left: 15px;
+  margin-bottom: 0;
+  margin-top: 0.25rem;
+  font-size: 14px;
+  padding-left: 1.5rem;
+  color: red;
+  position: absolute;
+}

@@ -1,0 +1,5 @@
+<button
+  *ngIf="config"
+  class="btn"
+  [ngClass]="{ 'btn-success':config.successBtnType, 'btn-danger':config.dangerBtnType }"
+>{{ config.btnName }}</button>

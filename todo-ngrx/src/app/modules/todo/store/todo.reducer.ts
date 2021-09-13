@@ -1,4 +1,4 @@
-import {Action, createReducer, on} from "@ngrx/store";
+import {createFeatureSelector, createReducer, createSelector, on} from "@ngrx/store";
 
 import * as TodoActions from './todo.actions';
 
@@ -13,8 +13,10 @@ export interface TodoState {
 
 const initialState: TodoState = {
   idIncrement: 1,
-  todoList: [],
+  todoList: [] as Todo[],
 }
+
+export const getTodoState = createFeatureSelector<TodoState>(TODO_REDUCER);
 
 export const todoReducer = createReducer<TodoState>(
   initialState,
@@ -31,4 +33,9 @@ export const todoReducer = createReducer<TodoState>(
     ],
 
   }))
+);
+
+export const getTodoList = createSelector(
+  getTodoState,
+  (state) => state.todoList,
 );
